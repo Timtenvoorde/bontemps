@@ -33,7 +33,7 @@ include_once 'includes/header.php';
 	if($user->isLoggedIn()) {
 
 		if($user->hasPermission('admin')) {
-			  echo '<div id="tableHolder"></div>';
+			  echo 'wajo <div id="tableHolder"></div>';
 			}
 		}
 	?>
