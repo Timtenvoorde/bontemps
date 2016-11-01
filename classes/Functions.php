@@ -114,9 +114,9 @@ public function getMenu($id) {
 		if ($res->num_rows > 0) {
 		    while($row = $res->fetch_assoc()) {
 		    	$text_array[] = $row;
+		}
+		return $text_array;
 	}
-	return $text_array;
-}
 }
 
 
