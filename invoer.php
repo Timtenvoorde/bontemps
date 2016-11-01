@@ -133,8 +133,6 @@ foreach($row as $key => $value)
 					}
 $bontemps->insertReservering($klant_id, $tafel_id, $begintijd, $eindtijd);
 
-$bontemps->setBeschikbaarheid($tafel_id);
-
 header('Refresh: 1; url=menus.php?id=' . $tafel_id . '');
 
 }

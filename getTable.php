@@ -42,6 +42,26 @@ foreach($row as $key => $value)
 			 	if($begintijd <= 0){
 			 		echo"<td>vrij</td>";
 			 	}
+				if($begintijd > 0){
+					$time = strtotime($begintijd);
+
+					$remaining = $time - time();
+					$days_remaining = floor($remaining / 86400);
+					$hours_remaining = floor(($remaining % 86400) / 3600);
+					$min = floor(($remaining % 3600) / 60);
+					$sec = ($remaining % 60);
+
+					echo"<td> Nog $hours_remaining:$min:$sec tot klant komt ($begintijd tot $eindtijd)</td>";
+					if($min <= 0){
+						if($sec <= 0){
+							$bontemps = new Functions();
+							$bontemps->setBeschikbaarheid($tafel_id);
+						}
+					}
+					echo "	<td></td>
+					<td><a href='info.php?id=" . $tafel_id . "'><span class='label label-default'>Info</span></a>
+					<td><a href='clear.php?id=" . $tafel_id . "'><span class='label label-default'>Clear</span></a>";
+				}	
 		 	}
 
 		 	else if($beschikbaarheid >= 1){
