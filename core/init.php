@@ -3,10 +3,10 @@ session_start();
 
 $GLOBALS['config'] = array(
 	'mysql' => array(
-		'host' => 'bontemps.eu5.org',
-		'username' => '1045808',
-		'password' => 'aldoenjytte2',
-		'db' => '1045808'
+		'host' => 'sql7.freemysqlhosting.net',
+		'username' => 'sql7142634',
+		'password' => 'zwfcyFrGfd',
+		'db' => 'sql7142634'
 	),
 	'remember' => array(
 		'cookie_name' => 'hash',
