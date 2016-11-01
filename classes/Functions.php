@@ -2,7 +2,7 @@
 class Functions extends database {
 
 	public function __construct() {
-		parent::__construct("bontemps", "localhost", "", "root");
+		parent::__construct("sql7142634", "sql7.freemysqlhosting.net", "zwfcyFrGfd", "sql7142634");
 		$this->getConnection();
 	}
 
