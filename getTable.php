@@ -85,11 +85,13 @@ foreach($row as $key => $value)
 						$sec = ($remaining % 60);
 						
 					echo "<td> " . $hours_remaining . " uur " .  $min . " minuten " .  $sec . " seconden</td>";
-					if($min <= 0){
-						if($sec <= 0){
-						$bontemps = new Functions();
-						$bontemps->resetTafel($tafel_id);
-						$bontemps->delReservering($tafel_id);
+					if($hours_remaining <= 0){
+						if($min <= 0){
+							if($sec <= 0){
+							$bontemps = new Functions();
+							$bontemps->resetTafel($tafel_id);
+							$bontemps->delReservering($tafel_id);
+							}
 						}
 					}
 
