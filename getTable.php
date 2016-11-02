@@ -99,7 +99,7 @@ foreach($row as $key => $value)
 					<td><a href='info.php?id=" . $tafel_id . "'><span class='label label-default'>Info</span></a>
 					<td><a href='clear.php?id=" . $tafel_id . "'><span class='label label-default'>Clear</span></a>";
 		 		}
-	}
-	echo '</tbody>';
+			}
+		echo '</tbody>';
 
 ?>
