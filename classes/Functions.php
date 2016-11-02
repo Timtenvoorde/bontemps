@@ -98,7 +98,15 @@ class Functions extends database {
 	return $text_array;
 }
 }
-
+public function insertMenu($menu_id) {
+		$res = $this->dbh->query("INSERT INTO reserveringmenu (menu_id) VALUES ('$menu_id')");
+		if ($res->num_rows > 0) {
+		    while($row = $res->fetch_assoc()) {
+		    	$text_array[] = $row;
+	}
+	return $text_array;
+}
+}
 
 public function getMenu($id) {
 		$res = $this->dbh->query("SELECT voorgerecht, hoofdgerecht, nagerecht, prijs FROM menus WHERE menu_id = '$id'");

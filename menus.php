@@ -1,16 +1,13 @@
 <html>
 <center>
 <?php
-
 require_once 'core/init.php';
 include_once 'includes/header.php';
 
-
 if(isset($_GET['id'])){
 		$bontemps = new Functions();
-
-$tafel_id = $_GET['id'];
-
+		$res_id = $_GET['id'];
+		echo "wajoooo" . $res_id;
 ?>
  		<h1><a href="index.php">Menu's</a></h1>
 			<table>
@@ -34,15 +31,12 @@ $tafel_id = $_GET['id'];
 							$menu_id = $value['menu_id'];
 							}
 						?>
-					  
 					</select>
 					<input type="submit" value="kies">
 				 </form>
 				 </td>
-
 <?php
-}
-if(isset($_GET['menus'])){
+if(@$_GET['menus']){
 			$menu_id = $_GET['menus'];
 
 	$bontemps = new Functions();
@@ -51,10 +45,7 @@ if(isset($_GET['menus'])){
 	foreach($row as $key => $value)
 	{
 ?>
-
 		<center>
-
-
 		<h1><a href="index.php">Menu's</a></h1>
 		<form name="kies" method="POST" action="menus.php">
 			<table>
@@ -98,16 +89,13 @@ if(isset($_GET['menus'])){
 	</center>
 <?php
 }
-if(isset($_POST['kies'])) {
-	$voorgerecht = $_POST['voorgerecht'];
-	$hoofdgerecht = $_POST['hoofdgerecht'];
-	$nagerecht = $_POST['nagerecht'];
-	$prijs = $_POST['prijs'];
-
-	echo $voorgerecht;
-	echo "wajoooooooooooooooooooo<br>asdlfjk<br>aljksdf";
-
 }
+
+
+if(@$_POST['kies']) {
+
+echo "MOOIIIIII $res_id";
+
 }
 ?>
 	</center>
