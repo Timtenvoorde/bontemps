@@ -33,11 +33,16 @@ if(isset($_GET['id'])){
 						?>
 					</select>
 					<input type="submit" value="kies">
+				<input type="hidden" name="res_id" value="<?php echo $res_id; ?>">
 				 </form>
 				 </td>
 <?php
-if(@$_GET['menus']){
-			$menu_id = $_GET['menus'];
+}
+if(isset($_POST['menus'])&&(isset($_POST['res_id']))){
+	$menu_id = $_GET['menus'];
+	$res_id = $_GET['res_id'];
+
+	echo $res_id;
 
 	$bontemps = new Functions();
 	$row = $bontemps->getMenu($menu_id);
@@ -85,6 +90,7 @@ if(@$_GET['menus']){
 			<p><input type="submit" value="Kies" name="kies"></p>
 		</tbody>
 	</table>
+		<input type="hidden" name="res_id" value="<?php echo $res_id; ?>">
 	</form>
 	</center>
 <?php
@@ -92,11 +98,13 @@ if(@$_GET['menus']){
 }
 
 
-if(@$_POST['kies']) {
+if(isset($_POST['kies'])) {
+	echo $res_id;
 
 echo "MOOIIIIII $res_id";
 
 }
+
 ?>
 	</center>
 </html>
