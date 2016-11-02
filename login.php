@@ -31,7 +31,7 @@ if(Input::exists()) {
 	}
 }
 ?>
-
+<center>
 <div class="container">
 <form class="form-horizontal" action="" method="post">
   <legend><p class="legend" style="margin-left: 50px;">Please login here</p></legend>
