@@ -33,8 +33,6 @@ $tafel_id = $_GET['id'];
 							";
 							$menu_id = $value['menu_id'];
 							}
-
-
 						?>
 					  
 					</select>
@@ -52,14 +50,13 @@ if(isset($_GET['menus'])){
 
 	foreach($row as $key => $value)
 	{
-
-
 ?>
 
 		<center>
 
 
 		<h1><a href="index.php">Menu's</a></h1>
+		<form name="kies" method="POST" action="menus.php">
 			<table>
 					<tr> 
 				<td>
@@ -94,19 +91,21 @@ if(isset($_GET['menus'])){
 					<input type="text" name="prijs" value="<?php echo $value['prijs']; ?>" readonly /> 
 				</td> 
 			</tr>
+			<p><input type="submit" value="Kies" name="kies"></p>
 		</tbody>
 	</table>
-		
-		
 	</form>
 	</center>
 <?php
 }
-if(isset($_POST['verstuur'])) {
+if(isset($_POST['kies'])) {
 	$voorgerecht = $_POST['voorgerecht'];
 	$hoofdgerecht = $_POST['hoofdgerecht'];
 	$nagerecht = $_POST['nagerecht'];
 	$prijs = $_POST['prijs'];
+
+	echo $voorgerecht;
+	echo "wajoooooooooooooooooooo<br>asdlfjk<br>aljksdf";
 
 }
 }

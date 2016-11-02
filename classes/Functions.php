@@ -119,6 +119,16 @@ public function getMenu($id) {
 	}
 }
 
+	public function getReserveringId($tafel_id){
+		$res = $this->dbh->query("SELECT reservering_id FROM reserveringen WHERE tafel_id = '$tafel_id'");
+		if ($res->num_rows > 0) {
+		    while($row = $res->fetch_assoc()) {
+		    	$text_array[] = $row;
+	}
+	return $text_array;
+}
+}
+
 
 }
 

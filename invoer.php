@@ -133,7 +133,13 @@ foreach($row as $key => $value)
 					}
 $bontemps->insertReservering($klant_id, $tafel_id, $begintijd, $eindtijd);
 
-header('Refresh: 1; url=menus.php?id=' . $tafel_id . '');
+$row = $bontemps->getReserveringId($tafel_id);
+foreach($row as $key => $value)
+{
+	$res_id = $value['reservering_id'];
+}
+
+header('Refresh: 1; url=menus.php?id=' . $res_id . '');
 
 }
 }
