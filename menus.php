@@ -32,26 +32,16 @@ if(isset($_GET['id'])){
 							}
 						?>
 					</select>
-<<<<<<< HEAD
 					<input type="submit" value="kies">
 				<input type="hidden" name="res_id" value="<?php echo $res_id; ?>">
-=======
 					<input type="submit" value="kieks">
->>>>>>> origin/master
 				 </form>
 				 </td>
 <?php
 }
-<<<<<<< HEAD  
-if(isset($_POST['menus'])&&(isset($_POST['res_id']))){
-	$menu_id = $_GET['menus'];
-	$res_id = $_GET['res_id'];
 
-	echo $res_id;
-=======
 if(isset($_GET['menus'])) {
 	$menu_id = $_GET['menus'];
->>>>>>> origin/master
 
 	$bontemps = new Functions();
 	$row = $bontemps->getMenu($menu_id);
@@ -108,21 +98,10 @@ if(isset($_GET['menus'])) {
 $res_id = $_GET['reservering_id'];
 
 if(isset($_POST['kies'])) {
-
-<<<<<<< HEAD
-if(isset($_POST['kies'])) {
 	echo $res_id;
-=======
 	echo "MOOIIIIII $res_id";
->>>>>>> origin/master
-
 	}
-
-<<<<<<< HEAD
 }
-
-=======
->>>>>>> origin/master
 ?>
 	</center>
 </html>
