@@ -101,7 +101,6 @@ if(isset($_POST['kies'])) {
 	echo $res_id;
 	echo "MOOIIIIII $res_id";
 	}
-}
 ?>
 	</center>
 </html>
