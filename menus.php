@@ -42,7 +42,7 @@ if(isset($_GET['id'])){
 				 </td>
 <?php
 }
-<<<<<<< HEAD
+<<<<<<< HEAD  
 if(isset($_POST['menus'])&&(isset($_POST['res_id']))){
 	$menu_id = $_GET['menus'];
 	$res_id = $_GET['res_id'];
