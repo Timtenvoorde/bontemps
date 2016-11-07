@@ -36,5 +36,11 @@ include_once 'includes/header.php';
 			  echo '<div id="tableHolder"></div>';
 			}
 		}
+	else{
+		echo"
+			<h1>Bontemps</h1>
+			<img src='images/bontemps.jpg'>
+		";
+	}
 	?>
 </div>
